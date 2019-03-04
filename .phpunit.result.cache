@@ -1,0 +1,1 @@
+C:30:"PHPUnit\Runner\TestResultCache":285:{a:2:{s:7:"defects";a:2:{s:40:"CheckOutTest::testItemsAreEmptyByDefault";i:4;s:27:"CheckOutTest::testScanItems";i:4;}s:5:"times";a:3:{s:39:"CheckOutTest::testTitleIsEmptyByDefault";d:0.001;s:40:"CheckOutTest::testItemsAreEmptyByDefault";d:0.002;s:27:"CheckOutTest::testScanItems";d:0;}}}
