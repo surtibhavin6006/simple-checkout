@@ -93,7 +93,7 @@ class CheckOut implements CheckOutInterface
 
         $finalData = $this->items;
 
-        unset($this->items);
+        $this->items = array();
 
         return $this->finalCalculation($finalData);
     }
@@ -143,7 +143,7 @@ class CheckOut implements CheckOutInterface
          */
 
         if($finalData['discount']) {
-            //$finalData['finalTotal'] = $finalData['finalTotal'] - $finalData['discount'];
+            $finalData['finalTotal'] = $finalData['finalTotal'] - $finalData['discount'];
         }
 
         return $finalData;
