@@ -5,8 +5,6 @@
 
 ## Installation and Guide
 
-We have used UUID instead of default auto incremented id.
-
 ### Installation
 * Clone a project.
 * Apply below command to install packages:
