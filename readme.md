@@ -1,7 +1,6 @@
 ## System Information
 
 * Php 7.2 or Above
-* Laravel Framework : 5.7
 
 ## Installation and Guide
 
