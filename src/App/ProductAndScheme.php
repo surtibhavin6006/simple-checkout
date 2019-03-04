@@ -48,7 +48,7 @@ class ProductAndScheme
         $this->schemes['ipd'] = array();
         $this->schemes['ipd']['type'] = 2;
         $this->schemes['ipd']['purchase'] = 4;
-        $this->schemes['ipd']['bulk_discount'] = 499.99;
+        $this->schemes['ipd']['bulk_discount_price'] = 499.99;
 
         $this->schemes['mbp'] = array();
         $this->schemes['mbp']['type'] = 3;

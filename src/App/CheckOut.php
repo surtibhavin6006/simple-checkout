@@ -45,6 +45,7 @@ class CheckOut implements CheckOutInterface
             $totalItemsCount = 0;
             $product = $this->productAndScheme->getProductById($item);
             $this->items[$item] = array();
+            $price = $product['price'];
 
             if(!empty($this->pricingRules[$item])){
 
@@ -67,10 +68,10 @@ class CheckOut implements CheckOutInterface
                 } else if($schemes['type'] == '2') {
 
                     $totalItemsCount = $totalUnits;
-                    $this->items[$item]['price'] = $product['price'];
 
                     if($totalUnits > $schemes['purchase']){
-                        $this->items['discount'] = $schemes['bulk_discount'];
+                        $this->items['discount'] = true;
+                        $price = $schemes['bulk_discount_price'];
                     }
 
                 } else if($schemes['type'] == '3') {
@@ -83,7 +84,7 @@ class CheckOut implements CheckOutInterface
                 $totalItemsCount = $totalUnits;
             }
 
-            $price = round($totalItemsCount * $product['price'],2);
+            $price = round($totalItemsCount * $price,2);
             $finalTotal += $price;
             $this->items[$item]['price'] = $price;
             $this->items[$item]['units'] = $totalUnits;
@@ -136,14 +137,6 @@ class CheckOut implements CheckOutInterface
                     }
                 }
             }
-        }
-
-        /**
-         * deducting discount
-         */
-
-        if($finalData['discount']) {
-            $finalData['finalTotal'] = $finalData['finalTotal'] - $finalData['discount'];
         }
 
         return $finalData;
