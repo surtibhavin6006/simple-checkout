@@ -47,3 +47,7 @@ We have used UUID instead of default auto incremented id.
         - discount :
             
             - Adjust totalAmount on discount amount.
+
+## TESTING
+
+- on terminal to project directory fire "vendor/phpunit/phpunit/phpunit" command.
